@@ -30,7 +30,7 @@ $(document).ready(function() {
   // });
 
   taskData = function() {
-    var url = 'http://jsonplaceholder.typicode.com/todos';
+    var url = 'https://jsonplaceholder.typicode.com/todos';
     var data = $.ajax({
       url: url,
       method: 'GET'

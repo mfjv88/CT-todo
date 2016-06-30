@@ -1,18 +1,33 @@
 $(document).ready(function() {
 
   tasks = [];
-  days = ['Domingo', 'Lunes', 'Martes', 'Miercoles', 'Jueves', 'Viernes', 'Sabado'];
 
-  htmlTask = function(task) {
-    var html = "<div class='row tasks-list-item'> <div class='col-xs-12'> <div class='checkbox'><label><input class='check-input' type='checkbox' id='" + task.id + " '> " + task.title + "</label><span>" + task.completed + "</span></div></div></div>";
-    return html;
-  };
+  // userId: 1,
+  // id: 0,
+  // title: "",
+  // completed: false
+
+  days = ['Domingo', 'Lunes', 'Martes', 'Miercoles', 'Jueves', 'Viernes', 'Sabado'];
 
   htmlDate = function() {
     var date = new Date();
     var html = "<p>" + date.getDate() + "</p>" + "<span> Monday </span>";
     return html;
   };
+
+  htmlTask = function(task) {
+    var html = "<div class='row tasks-list-item'> <div class='col-xs-12'> <div class='checkbox'><label><input class='check-input' type='checkbox' id='" + task.id + " '> " + task.title + "</label><span>" + task.completed + "</span></div></div></div>";
+    return html;
+  };
+
+  // submittodo = $('#submit');
+  //
+  // submittodo.click(function(todoItem){
+  //   console.log($("#todoItem").datavalue);
+  //   $(".form-control").push(tasks.title);
+  //   id = tasks.id + 1;
+  //   htmlTask(todoItem);
+  // });
 
   taskData = function() {
     var url = 'http://jsonplaceholder.typicode.com/todos';
@@ -45,7 +60,7 @@ $(document).ready(function() {
     var incomplete = 0;
 
 
-    var htmlTasks = [];
+    htmlTasks = [];
     $('.tasks-list').html('');
     $('#progress').html('');
     for (var i = 0; i < tasks.length; i++) {
@@ -54,6 +69,7 @@ $(document).ready(function() {
       }
     }
     $('.tasks-list').html(htmlTasks.join(""));
+
 
     for (var i = 0; i < tasks.length; i++) {
       if (tasks[i].completed === true) {

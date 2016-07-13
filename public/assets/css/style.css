@@ -29,7 +29,7 @@
 
 #main-component-wrapper .main-component {
   box-shadow: 0px 0px 5px 0px #888888;
-  margin-top: 80px;
+  margin-top: 40px;
 }
 
 #main-component-wrapper .main-component #info-overview {
@@ -96,4 +96,43 @@
   position: relative;
   display: inline;
   margin-right: 10px;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  height:42px;
+  flex-wrap:wrap;
+}
+
+@media only screen and (max-width: 800px) and (orientation: portrait) {
+  /*.tasks-list{
+    max-height: calc(100vh - 456px) !important;
+  }*/
+  .footer {
+    margin-top: 10px;
+    height: auto !important;
+    text-align: center;
+    display: inherit;
+  }
+  #main-component-wrapper .main-component {
+    margin-top: 20px;
+  }
+}
+
+@media only screen and (max-width: 800px) and (orientation: landscape){
+  .tasks-list{
+    max-height: calc(125vh - 400px) !important;
+  }
+  #main-component-wrapper .main-component {
+    box-shadow: 0px 0px 5px 0px #888888;
+    margin-top: 20px;
+  }
+  .footer{
+    display: inherit;
+    text-align: center;
+  }
+  #main-component-wrapper .main-component {
+    margin-top: 20px;
+  }
 }

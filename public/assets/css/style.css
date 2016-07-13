@@ -3,7 +3,7 @@
 }
 
 .navbar-default {
-  background-color: #223843;
+  background-color: lightgrey;
   border-radius: 0;
   border: 0;
 }
@@ -23,7 +23,7 @@
 
 #main-component-wrapper {
   background-color: #EFF1F3;
-  height: calc(100vh - 50px);
+  height: calc(94vh - 50px);
   width: 100%;
 }
 
@@ -33,7 +33,7 @@
 }
 
 #main-component-wrapper .main-component #info-overview {
-  background-color: #EB5D5C;
+  background-color: #db8912;
   text-align: center;
   padding: 20px 0;
 }
@@ -59,7 +59,7 @@
 }
 
 .info-divider {
-  background-color: #9F3D3C;
+  background-color: #9e9a6a;
   color: white;
   padding: 5px 0;
   text-align: center;
